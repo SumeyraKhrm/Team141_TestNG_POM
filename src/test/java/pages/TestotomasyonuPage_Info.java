@@ -1,12 +1,11 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class TestotomasyonuPage {
+public class TestotomasyonuPage_Info {
     /*
         Page class'larinda locate yapabilmesi icin
         WebDriver objemizi bu class'a tanitmamiz gerekiyor
@@ -25,7 +24,7 @@ public class TestotomasyonuPage {
         icerisinde initElements() method'u ile WebDriver'i tanitmak olacaktir.
      */
 
-    public TestotomasyonuPage(){
+    public TestotomasyonuPage_Info(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

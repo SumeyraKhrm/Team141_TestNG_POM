@@ -10,14 +10,12 @@
  <!--   
     .xml dosyalari ile TestNG calistirilabilir
     
-    .xml ile TestNG'de istenen class/package/method/gruplari calistirmak icin
+    1-).xml ile TestNG'de istenen class/package/method/gruplari calistirmak icin
     oncelikle ilk satira 
     <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">   yazilmalidir
-    
     Bu satir, bu .xml dosyasinin TestNG'ye emir verebilmesini saglayan kod parcacigidir
     
-    Ilk satiri yazdiktan sonra 
-    Test Hiyerarsisine uygun olarak
+    2-) Ilk satiri yazdiktan sonra Test Hiyerarsisine uygun olarak
     en ustten baslayip, calistirmak istediginiz 
     class/package/method/gruplar'a kadar silsileyi yazmalisiniz
     

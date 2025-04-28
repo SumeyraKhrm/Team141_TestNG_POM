@@ -26,14 +26,14 @@ public class ConfigReader {
 
     static Properties properties; // configuration.properties'deki tum key-value'ler yuklendi
 
-    static {// static blok herseyden once calisir
+    static {// static blok herseyden once calisir yani method dan once
 
         String dosyaYolu= "configuration.properties";
         try {
 
-            FileInputStream fis= new FileInputStream(dosyaYolu);
+            FileInputStream fis= new FileInputStream(dosyaYolu); // gidip belirttigimiz dosya yolunundaki belirttigimiz bilgileri alip getirir
             properties= new Properties();
-            properties.load(fis);
+            properties.load(fis);  //fis deki bilgileri properties objesine eklenir
 
 
         } catch (IOException e) {
@@ -41,6 +41,7 @@ public class ConfigReader {
         }
     }
 
+    //method calismaya basladiginda configuration.properties'deki tum key-value'lere sahip
     public static String getProperty(String key){
 
         return properties.getProperty(key);

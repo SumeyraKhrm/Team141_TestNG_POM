@@ -1,11 +1,9 @@
 package tests.day13_testNGFramework;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.Driver;
 
 public class C06_PageClassKullanimi {
@@ -15,7 +13,7 @@ public class C06_PageClassKullanimi {
     // 2- phone icin arama yapip urun bulunabildigini test edin
     // 3- ilk urunu tiklayip, urun isminde case sensitive olmadan "phone" bulundugunu test edin
 
-    TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+    TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
 
     @Test(groups = "smoke")
     public void anasayfaTesti(){

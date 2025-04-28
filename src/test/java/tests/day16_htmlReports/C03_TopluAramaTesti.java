@@ -1,10 +1,9 @@
 package tests.day16_htmlReports;
 
 import org.openqa.selenium.Keys;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -28,7 +27,7 @@ public class C03_TopluAramaTesti {
         // testotomasyonu sayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 
-        TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
         SoftAssert softAssert = new SoftAssert();
 
         for (String eachUrun :aranacakUrunlerList){

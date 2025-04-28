@@ -2,7 +2,7 @@ package tests.day16_htmlReports;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -42,7 +42,7 @@ public class C01_RaporluPositiveLoginTesti extends TestBaseRapor {
 
         ReusableMethods.bekle(1);
         // 2- account linkine basin
-        TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
         testotomasyonuPage.accountLinki
                 .click();
         extentTest.info("account linkine basar");
@@ -61,6 +61,7 @@ public class C01_RaporluPositiveLoginTesti extends TestBaseRapor {
         ReusableMethods.bekle(1);
         Assert.assertTrue(testotomasyonuPage.logoutButonu.isDisplayed());
         extentTest.pass("Basarili olarak giris yapilabildigini test eder");
+        //assestions icin pass kullanilir
 
         ReusableMethods.bekle(1);
         // logout olun

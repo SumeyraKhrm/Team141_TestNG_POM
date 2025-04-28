@@ -2,7 +2,7 @@ package tests.day14_testNGFramework_assertions;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -17,11 +17,11 @@ public class C05_DinamikNegativeLoginTesti {
     //4- Login butonuna basarak login olmayi deneyin
     //5- Basarili olarak giris yapilamadigini test edin
 
-    static TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+    static TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
 
     @Test(groups = "smoke")
     public void gecersizPasswordTesti(){
-        testotomasyonuPage = new TestotomasyonuPage();
+        testotomasyonuPage = new TestotomasyonuPage_Info();
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
@@ -44,7 +44,7 @@ public class C05_DinamikNegativeLoginTesti {
 
     @Test(groups = {"smoke","regression"})
     public void gecersizEmailTesti(){
-        testotomasyonuPage = new TestotomasyonuPage();
+        testotomasyonuPage = new TestotomasyonuPage_Info();
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
@@ -63,7 +63,7 @@ public class C05_DinamikNegativeLoginTesti {
 
     @Test(groups = {"smoke","E2E"})
     public void gecersizEmailGecersizPasswordTesti(){
-        testotomasyonuPage = new TestotomasyonuPage();
+        testotomasyonuPage = new TestotomasyonuPage_Info();
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));

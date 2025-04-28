@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Team148_TestNG_POM" />
+        <module name="Team148_TestNG_POM_Winter2024-main" />
       </profile>
     </annotationProcessing>
   </component>

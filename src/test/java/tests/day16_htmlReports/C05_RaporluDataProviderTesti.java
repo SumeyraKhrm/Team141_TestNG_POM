@@ -4,7 +4,7 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -31,7 +31,7 @@ public class C05_RaporluDataProviderTesti extends TestBaseRapor {
         // testotomasyonu sayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
         extentTest.info("Kullanici testotomasyonu sayfasina gider");
-        TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
 
         // arama kutusuna aranacakUrun'u yazdirip enter'a basin
         testotomasyonuPage.aramaKutusu.sendKeys(aranacakUrun + Keys.ENTER);

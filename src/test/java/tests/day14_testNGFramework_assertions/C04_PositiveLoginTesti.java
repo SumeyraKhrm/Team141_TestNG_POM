@@ -2,7 +2,7 @@ package tests.day14_testNGFramework_assertions;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -34,7 +34,7 @@ public class C04_PositiveLoginTesti {
 
         // 2- account linkine basin
 
-        TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
         testotomasyonuPage.accountLinki
                             .click();
 
@@ -68,7 +68,7 @@ public class C04_PositiveLoginTesti {
 
         ReusableMethods.bekle(1);
         // 2- account linkine basin
-        TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
         testotomasyonuPage.accountLinki
                             .click();
 

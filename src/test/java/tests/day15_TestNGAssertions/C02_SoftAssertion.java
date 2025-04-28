@@ -1,10 +1,9 @@
 package tests.day15_TestNGAssertions;
 
 import org.openqa.selenium.Keys;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -28,7 +27,7 @@ public class C02_SoftAssertion {
 
         // 2- phone icin arama yapip
 
-        TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
         testotomasyonuPage.aramaKutusu
                 .sendKeys(ConfigReader.getProperty("toAranacakKelime") + Keys.ENTER);
 

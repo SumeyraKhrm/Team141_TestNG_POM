@@ -2,20 +2,20 @@ package tests.day16_htmlReports;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.TestotomasyonuPage;
+import pages.TestotomasyonuPage_Info;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class C02_RaporluNegativeLoginTesti extends TestBaseRapor {
 
-    static TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+    static TestotomasyonuPage_Info testotomasyonuPage = new TestotomasyonuPage_Info();
 
     @Test(groups = "smoke")
     public void gecersizPasswordTesti(){
         extentTest = extentReports.createTest("Gecersiz Password testi",
                 "Kullanici gecerli email ve gecersiz password ile giris yapamamali");
-        testotomasyonuPage = new TestotomasyonuPage();
+        testotomasyonuPage = new TestotomasyonuPage_Info();
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
@@ -45,7 +45,7 @@ public class C02_RaporluNegativeLoginTesti extends TestBaseRapor {
 
     @Test
     public void gecersizEmailTesti(){
-        testotomasyonuPage = new TestotomasyonuPage();
+        testotomasyonuPage = new TestotomasyonuPage_Info();
         extentTest = extentReports.createTest("Gecersiz Email testi",
                 "Kullanici gecersiz email ve gecerli password ile giris yapamamali");
 
@@ -79,7 +79,7 @@ public class C02_RaporluNegativeLoginTesti extends TestBaseRapor {
 
     @Test
     public void gecersizEmailGecersizPasswordTesti(){
-        testotomasyonuPage = new TestotomasyonuPage();
+        testotomasyonuPage = new TestotomasyonuPage_Info();
 
         extentTest = extentReports.createTest("Gecersiz Email ve Gecersiz Password testi",
                 "Kullanici gecersiz email ve gecersiz password ile giris yapamamali");

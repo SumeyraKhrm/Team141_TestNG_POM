@@ -17,6 +17,7 @@ public class Driver {
 
     public static WebDriver driver;
 
+    //ARTIK bir driver method olusturuyoruz
     public static WebDriver getDriver(){
         /*
             Bu method'u her kullandigimizda new ChromeDriver(); calisinca
