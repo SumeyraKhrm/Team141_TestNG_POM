@@ -1,0 +1,59 @@
+
+<!--
+    Gunluk olarak calistirmamiz gereken
+    smoke test icin asagidaki class'lari calistirin
+
+    day13  ==> C04, C06
+    day14  ==> C02,C04,C05
+    day15  ==> C02
+ -->
+ <!--   
+    .xml dosyalari ile TestNG calistirilabilir
+    
+    .xml ile TestNG'de istenen class/package/method/gruplari calistirmak icin
+    oncelikle ilk satira 
+    <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">   yazilmalidir
+    
+    Bu satir, bu .xml dosyasinin TestNG'ye emir verebilmesini saglayan kod parcacigidir
+    
+    Ilk satiri yazdiktan sonra 
+    Test Hiyerarsisine uygun olarak
+    en ustten baslayip, calistirmak istediginiz 
+    class/package/method/gruplar'a kadar silsileyi yazmalisiniz
+    
+    
+    Test hiyerarsisi
+    
+    Suite ==> bir veya birden fazla Test'den meydana gelir
+              belirli bir amac icin belirlenen periyotlarda calistirilir
+              Regression Suite, E2E Suite ...
+              
+    Test  ==> Smoke Test, E2E1 testi, Regression Test...
+              belirli bir amac icin bir araya getirilmis olan
+              ve belirlenen araliklarla calistirilan 
+              class/package/method/gruplar'dir.
+              
+    class/package/method/gruplar
+                      
+  
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test Suite">
+    <test name="Smoke Test">
+
+        <classes>
+            
+            <class name="tests.day13_testNGFramework.C04_Priority"></class>
+            <class name="tests.day13_testNGFramework.C06_PageClassKullanimi"></class>
+            <class name="tests.day14_testNGFramework_assertions.C02_DropdownTesti"></class>
+            <class name="tests.day14_testNGFramework_assertions.C04_PositiveLoginTesti"></class>
+            <class name="tests.day14_testNGFramework_assertions.C05_DinamikNegativeLoginTesti"></class>
+            <class name="tests.day15_TestNGAssertions.C02_SoftAssertion"></class>
+            
+        </classes>
+        
+    </test>
+</suite>
+

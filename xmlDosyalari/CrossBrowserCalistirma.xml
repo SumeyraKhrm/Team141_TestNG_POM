@@ -1,0 +1,74 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+    <!--
+
+        CrossBrowser testlerdeki ana amac
+        uygulamamizin farkli browser'larda sorunsuz olarak calistigini test etmektir
+
+        Biz toplu calistirmayi .xml dosyalariyla yapiyoruz
+
+        .xml dosyasi calismaya basladiginda
+                ==> once class'a,
+                ==> class driver objesi icin Driver class'ina
+                ==> Driver class'i da calisacakBrowser'i belirlemek icin
+                    configuration.properties dosyasina gider
+
+       .xml calismaya basladiktan sonra
+       arada durdurup , configuration.properties dosyasindaki
+       browser = chrome  atamasini degistirmemiz MUMKUN OLMADIGINDAN
+
+       cross browser icin cok ozel bir calisma dongusu olusturacagiz
+       bu dongu tum class'larin calisma mantigi disinda olacagi icin
+
+       cross browser testler framework'deki tum class'lar icin DEGIL
+       ozel olarak hazirlanmis, SINIRLI SAYIDA test icin calistirilir
+
+
+    -->
+
+<suite name="Cross Browser Calistirma">
+
+    <test name="Chrome ile calisacak classlar">
+        <parameter name="kullanilacakBrowser" value="chrome"></parameter>
+
+        <packages>
+            <package name="tests.day17_CrossBrowserCalistirilacakTestler"></package>
+        </packages>
+
+
+    </test>
+
+    <test name="Firefox ile calisacak classlar">
+        <parameter name="kullanilacakBrowser" value="firefox"></parameter>
+
+        <packages>
+            <package name="tests.day17_CrossBrowserCalistirilacakTestler"></package>
+        </packages>
+
+    </test>
+
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

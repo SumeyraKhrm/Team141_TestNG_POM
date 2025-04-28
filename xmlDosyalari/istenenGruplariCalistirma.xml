@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<!--
+
+    TestNG bizim hangi class/package/method'lari calistirmak istedigimizi bilemez
+    MUTLAKA kendi secimlerimizi TestNG'ye soylemeliyiz
+
+    secimlerimizi TestNG xml dosyasina iletmek icin de
+    2 alternatifimiz var
+
+    1- istedigimiz class/package/method'lari hiyerarsiye uygun olarak
+       .xml dosyasina ekleyebiliriz
+
+    2- her bir method'a hangi testlerde calisacagini da
+       grup olarak ekleyebiliriz
+
+-->
+
+<suite name="Grup calistirma Suite">
+    
+    <test name="Grup Calistirma">
+        <!-- Grup calistirma icin , once hangi gruplarin calisip calismayacagini soyluyoruz -->
+        <groups>
+            <run>
+               <include name="smoke"></include>
+               <include name="E2E"></include>
+
+            </run>
+        </groups>
+
+        <!-- sonra bu gruplari nerede bulacagini soyluyoruz -->
+        <packages>
+            <package name="tests.*"></package>
+        </packages>
+
+
+
+    </test>
+
+</suite>

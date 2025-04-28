@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    Paralel calistirma icin
+    suite tag'ina 2 tane attribute eklememiz gerekiyor
+
+    thread-count : ayni anda kac browser'in calisacagini belirler
+    parallel : calisacak browser'lar arasinda gorev paylasim seviyesini belirler
+
+    method secilirse : her browser bir method'u calistirmaya baslar,
+                       method'u bitiren yeni bir method alir.
+
+                       Bu secimin negatif tarafi, birbirine bagli method'lar varsa
+                       bu method'lari farkli browser'lar calistirmak isteyebilir
+                       bu da testlerin FAILED olmasina sebep olur
+    diger alternatifler class ve test bazinda paylasimdir
+    en dogru secim test seviyesinde paylasim olacaktir
+
+    Calisacak browserlarin mumkun oldugunca esit is yukune sahip olmasi
+    ve mumkun oldugunca ayni surede islerini bitirmeleri icin
+    calisacak class'lari biz browser'lara gore farkli testler olarak hazirlayabiliriz
+
+    kullanilmasi zorunlu olmayan verbose attribute'u
+    konsolda yazdirilan aciklama miktarini belirler
+    1 en az aciklama
+    10 en cok aciklama olmak uzere
+    istenen deger yazilabilir
+-->
+
+<suite name="Testleri paralel calistirma" thread-count="2" parallel="tests" verbose="4">
+
+   <test name="Test 1">
+       <classes>
+           <class name="tests.day13_testNGFramework.C04_Priority"></class>
+           <class name="tests.day13_testNGFramework.C06_PageClassKullanimi"></class>
+           <class name="tests.day14_testNGFramework_assertions.C02_DropdownTesti"></class>
+       </classes>
+   </test>
+
+   <test name="Test2">
+       <classes>
+           <class name="tests.day14_testNGFramework_assertions.C04_PositiveLoginTesti"></class>
+           <class name="tests.day14_testNGFramework_assertions.C05_DinamikNegativeLoginTesti"></class>
+           <class name="tests.day15_TestNGAssertions.C02_SoftAssertion"></class>
+       </classes>
+   </test>
+
+
+</suite>
+

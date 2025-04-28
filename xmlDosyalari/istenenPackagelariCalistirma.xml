@@ -1,0 +1,16 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- E2E testi olarak day14 package'ini calistirin
+
+
+     NOT : eger tum package'lari calistirmamizi isterse
+           package ismi olarak * yazabilirsiniz   -->
+
+<suite name="E2E suite">
+    <test name="E2E Testi">
+        <packages>
+            <package name="tests.day16_htmlReports"></package>
+        </packages>
+    </test>
+</suite>
